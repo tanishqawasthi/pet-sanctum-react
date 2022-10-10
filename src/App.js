@@ -1,6 +1,4 @@
-import MainApp from "./components/MainApp/MainApp";
-import { Button } from 'react-bootstrap';
-
+import MainApp from "./MainApp";
 
 function App() {
   return (

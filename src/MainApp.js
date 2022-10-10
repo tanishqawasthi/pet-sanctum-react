@@ -1,7 +1,9 @@
+import Adopt from "./components/Adopt/Adopt";
+
 let MainApp = (props)=>{
     return (
         <div>
-            Hi
+            <Adopt/>
         </div>
     )
 };
