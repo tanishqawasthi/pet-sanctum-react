@@ -1,16 +1,24 @@
 import React from 'react'
-import "./home.css";
+import "./Home.css";
+import homeImg1 from "./Homeimages/stray-dof-sarfraz-scaled.jpg"
+import homeImg2 from "./Homeimages/background.jpg"
+import homeImg3 from "./Homeimages/stray2.jpg"
+import homeImg4 from "./Homeimages/pet.jpg"
+import homeImg5 from "./Homeimages/154189.jpg"
+import homeImg6 from "./Homeimages/testimonials/modiji.jpg"
+import homeImg7 from "./Homeimages/154189.jpg"
+import homeImg8 from "./Homeimages/img.webp"
 
 let Home = (props)=>{
 
     return (
         <React.Fragment>      
-            <section id="home">
-                <div className="container-fluid px-0 top-banner" style = {{background: "url('../Resources/images/Homeimages/stray-dof-sarfraz-scaled.jpg') , noRepeat ,center"}}>
+            <section id="home" className='home_sreekar'>
+                <div className="container-fluid px-0 top-banner" style ={{backgroundImage: `url(${homeImg1}) `,backgroundRepeat: "noRepeat" ,backgroundPosition: "center"}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-5 col-md-6">
-                                <h1 style={{color: "black"}}>Providing All Animals Homes.</h1>
+                                <h1 className="hech1_sreekar" style={{color: "white"}}>Providing All Animals Homes.</h1>
                                 <p style={{color: "white"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
                                     veritatis ducimus dolor harum
                                     neque consectetur ratione nisi sed architecto, atque et ipsum, esse laborum labore deleniti
@@ -37,17 +45,17 @@ let Home = (props)=>{
 
         
             <section id="about" data-aos="fade-up">
-                <div className="about-section wrapper" style={{backgroundColor: "var(--secondary-color); padding-bottom: 0;"}}>
+                <div className="about-section wrapper" style={{backgroundColor: "var(--secondary-color)", paddingBottom: "0"}}>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-7 col-md-12 mb-lg-0 mb-5">
                                 <div className="card border-0 sreekar">
-                                    <img src="../Resources/images/Homeimages/154189.jpg" className="img-fluid" alt="" />
+                                    <img src={homeImg7} className="img-fluid" alt="" />
                                 </div>
                             </div>
                             <div className="col-lg-5 col-md-12 text-sec">
-                                <h2 style={{color:"white"}}>About Us</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam corrupti repudiandae?
+                                <h2 className="hech2_sreekar" style={{color:"white"}}>About Us</h2>
+                                <p className="pee_sreekar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam corrupti repudiandae?
                                     Minus asperiores ipsum adipisci exercitationem recusand</p>
                                 <a href="http://localhost:3000/DonateUs"><button className="main-btn mt-4">Read More</button></a>
                             </div>
@@ -58,12 +66,12 @@ let Home = (props)=>{
                     <br />
                     <br />
                     <br />
-                    <div className="rescue-stray-section wrapper" style="background-color: white;">
+                    <div className="rescue-stray-section wrapper" style={{backgroundColor: "white"}}>
                         <div className="container rescue-stray">
                             <div className="row align-items-center">
                                 <div className="col-lg-5 col-md-12 text-sec mb-lg-0 mb-5">
-                                    <h2 style="color: var(--primary-color);">Help a Stray Animal Get a Home.</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, soluta mollitia
+                                    <h2 className="hech2_sreekar" style={{color: "var(--primary-color)"}}>Help a Stray Animal Get a Home.</h2>
+                                    <p className="pee_sreekar">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, soluta mollitia
                                         aspernatur ab ex veritatis culpa excepturi laboriosam asperiores quidem! Inventore
                                         commodi minima unde incidunt mollitia magni facere, ut corrupti!
                                         Cupiditate odio dolorum iure nostrum placeat a voluptates neque voluptas. Iusto deserunt
@@ -73,7 +81,7 @@ let Home = (props)=>{
                                 </div>
                                 <div className="col-lg-7 col-md-12">
                                     <div className="card border-0">
-                                        <img src="../Resources/images/Homeimages/img.webp" alt="" className="img-fluid" />
+                                        <img src={homeImg8} alt="" className="img-fluid" />
                                     </div>
                                 </div>
                             </div>
@@ -83,13 +91,13 @@ let Home = (props)=>{
             </section>
 
             <section className="story" data-aos="fade-up">
-                <div className="story-section" style="background: url(../Resources/images/Homeimages/background.jpg) no-repeat center;">
+                <div className="story-section" style={{background: `url(${homeImg2})`, backgroundRepeat: "noRepeat" ,backgroundPosition: "center"}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="text-content">
-                                    <h2>It All Started With One Animal</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia est veniam magni
+                                    <h2 className="hech2_sreekar">It All Started With One Animal</h2>
+                                    <p className="pee_sreekar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia est veniam magni
                                         perspiciatis, recusandae itaque voluptas. Nostrum laudantium dolores velit, soluta
                                         laboriosam similique et consequatur, optio repellat repellendus, voluptas repudiandae.
                                     </p>
@@ -102,7 +110,7 @@ let Home = (props)=>{
                 </div>
             </section>
 
-            <section id="explore-features" style="background-color: var(--white-color);">
+            <section id="explore-features" style={{backgroundColor: "var(--white-color)"}}>
                 
                 <div className="explore-features wrapper">
 
@@ -112,7 +120,7 @@ let Home = (props)=>{
                                 <div className="card bg-light h-100">
                                     <div className="card-body text-center">
                                         <div className='square-box'>
-                                            <div className='square-content' id="card1Image" style="background-image: url(../Resources/images/Homeimages/stray2.jpg);" data-aos="fade-right">
+                                            <div className='square-content' id="card1Image" style={{backgroundImage: `url(${homeImg3})`, dataAos:"fade-right"}}>
 
                                             </div>
                                         </div>
@@ -128,7 +136,7 @@ let Home = (props)=>{
                                 <div className="card bg-light h-100">
                                     <div className="card-body text-center">
                                         <div className='square-box'>
-                                            <div className='square-content' id="card2Image" style="background-image: url(../Resources/images/Homeimages/pet.jpg);" data-aos="fade-up"></div>
+                                            <div className='square-content' id="card2Image" style={{backgroundImage: `url(${homeImg4})`, dataAos:"fade-up"}}></div>
                                         </div>
 
                                         <a href="http://localhost:3000/Upload"><div className="card-btn m-3">Find Owner</div></a>
@@ -142,7 +150,7 @@ let Home = (props)=>{
                                 <div className="card bg-light h-100">
                                     <div className="card-body text-center">
                                         <div className='square-box'>
-                                            <div className='square-content' id="card3Image" style="background-image: url(../Resources/images/Homeimages/154189.jpg);" data-aos="fade-left"></div>
+                                            <div className='square-content' id="card3Image" style={{backgroundImage: `url(${homeImg5})`, dataAos:"fade-left"}}></div>
                                         </div>
 
                                         <a href="http://localhost:3000/Rescue"><div className="card-btn m-3">Rescue A Stray</div></a>
@@ -159,7 +167,7 @@ let Home = (props)=>{
                 <div className="wrapper testimonial-section">
                     <div className="container" text-center>
                         <div className="text-center pb-4">
-                            <h2 style="color: var(--primary-color);">Testimonials</h2>
+                            <h2 className="hech2_sreekar" style={{color: "var(--primary-color)"}}>Testimonials</h2>
                         </div>
                         <div className="row">
                             <div className="col-sm-12 col-lg-10 offset-lg-1">
@@ -177,23 +185,23 @@ let Home = (props)=>{
                                         <div className="carousel-inner">
                                             <div className="carousel-item active">
                                                 <div className="carousel-caption">
-                                                    <img src="../Resources/images/Homeimages/testimonials/modiji.jpg" alt="" />
-                                                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit"</p>
-                                                    <h5 style="color: white;">Narendra Modi - Prime Minister of India</h5>
+                                                    <img src={homeImg6} alt="" />
+                                                    <p className="pee_sreekar">"Lorem ipsum dolor sit amet consectetur adipisicing elit"</p>
+                                                    <h5 className="hech5_sreekar" style={{color: "white"}}>Narendra Modi - Prime Minister of India</h5>
                                                 </div>
                                             </div>
                                             <div className="carousel-item">
                                                 <div className="carousel-caption">
-                                                    <img src="../Resources/images/Homeimages/testimonials/putin.jpeg" alt="" />
-                                                    <p>"Очень хороший сайт. Пожалуйста, ставьте оценки"</p>
-                                                    <h5 style="color: white;">Vladimir Putin - President of Russia</h5>
+                                                    <img src="./Homeimages/testimonials/putin.jpeg" alt="" />
+                                                    <p className="pee_sreekar">"Очень хороший сайт. Пожалуйста, ставьте оценки"</p>
+                                                    <h5 className="hech5_sreekar" style={{color: "white"}}>Vladimir Putin - President of Russia</h5>
                                                 </div>
                                             </div>
                                             <div className="carousel-item">
                                                 <div className="carousel-caption">
-                                                    <img src="../Resources/images/Homeimages/testimonials/testimonial.jpg" alt="" className="mt-3" />
-                                                    <p>"I wish there were more such organizations in the world."</p>
-                                                    <h5 style="color: white;">Dr. Michelle - Animal Right Activist</h5>
+                                                    <img src="./Homeimages/testimonials/testimonial.jpg" alt="" className="mt-3" />
+                                                    <p className="pee_sreekar">"I wish there were more such organizations in the world."</p>
+                                                    <h5 className="hech5_sreekar" style={{color: "white"}}>Dr. Michelle - Animal Right Activist</h5>
                                                 </div>
                                             </div>
 
@@ -208,12 +216,12 @@ let Home = (props)=>{
 
             <section className="p-5 faq" id="questions" data-aos="fade-up">
                 <div className="container">
-                    <h2 className="text-center mb-4">
+                    <h2 className="hech2_sreekar, text-center mb-4">
                         Frequently Asked Questions
                     </h2>
                     <div className="accordion accordion-flush" id="questions">
                         <div className="accordion-item">
-                            <h2 className="accordion-header">
+                            <h2 className="hech2_sreekar, accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#one">
                                     Where are you located?
@@ -230,7 +238,7 @@ let Home = (props)=>{
                             </div>
                         </div>
                         <div className="accordion-item">
-                            <h2 className="accordion-header">
+                            <h2 className="hech2_sreekar, accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#two">
                                     What do I need to know?
@@ -247,7 +255,7 @@ let Home = (props)=>{
                             </div>
                         </div>
                         <div className="accordion-item">
-                            <h2 className="accordion-header">
+                            <h2 className="hech2_sreekar, accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#three">
                                     How much does it cost?
@@ -264,7 +272,7 @@ let Home = (props)=>{
                             </div>
                         </div>
                         <div className="accordion-item">
-                            <h2 className="accordion-header">
+                            <h2 className="hech2_sreekar, accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#four">
                                     How do I sign up?
@@ -282,7 +290,7 @@ let Home = (props)=>{
                         </div>
                     </div>
                     <div className="accordion-item">
-                        <h2 className="accordion-header">
+                        <h2 className="hech2_sreekar, accordion-header">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#five">
                                 What can I expect out of your courses?
@@ -300,6 +308,7 @@ let Home = (props)=>{
                     </div>
                 </div>
             </section>
+        
         </React.Fragment>
     );
 };
