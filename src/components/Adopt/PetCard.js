@@ -1,0 +1,31 @@
+let PetCard = (props) => {
+  return (
+    <div className="col-md-6 col-lg-3">
+      <div className="card bg-light h-100">
+        <div className="card-body text-center">
+          <div className="square-box">
+            <div
+              className="square-content cardImage"
+              id="card12Image"
+              style={{
+                backgroundImage: `url(${props.data.imageUrl})`,
+              }}
+            ></div>
+          </div>
+          <h3 className="card-title mb-2 mt-2"> {props.data.name} </h3>
+          <p className="card-text mb-0"> {props.data.breed} </p>
+          <p className="card-text mt-0"> {props.data.pincode} </p>
+          <div className="">
+            <a href={`/Pet?id=${props.data._id.uid}`} target="blank">
+              <button type="button" className="btn m-2 text-dark adopt-btn">
+                Know More
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PetCard;
