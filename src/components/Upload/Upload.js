@@ -25,7 +25,7 @@ let Upload = (props)=>{
                                     </div>
                                     <div className="col-sm-8">
                                         <div className="card-block">
-                                            <h6 className="m-b-20 p-b-5 b-b-default f-w-600">Enter Pet Profile</h6>
+                                            <h6 className="h6_tejas m-b-20 p-b-5 b-b-default f-w-600">Enter Pet Profile</h6>
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <p className="m-b-5 f-w-600">Name of Pet</p>
@@ -118,7 +118,7 @@ let Upload = (props)=>{
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Any Additional Information</h6>
+                                            <h6 className="h6_tejas m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Any Additional Information</h6>
                                             <div className="row">
                                                 <div className="col-sm-12">
                                                     <textarea rows="5" className="form-control"
