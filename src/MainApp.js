@@ -1,10 +1,25 @@
 import Adopt from "./components/Adopt/Adopt";
-import Rescue from "./components/Rescue/Rescue";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
+import { Routes, Route } from "react-router-dom"
+import Footer from "./components/Footer/Footer"
+import Upload from "./components/Upload/Upload"
+import Test from "./components/Test/Test"
+import Rescue from "./components/Rescue/Rescue"
 
 let MainApp = (props)=>{
     return (
         <div>
-            <Rescue/>
+            <Navbar/>
+            <Routes>
+                <Route index element={<Home/>} />
+                <Route path="/Adopt" element={<Adopt/>} />
+                <Route path="/Rescue" element={<Rescue />} />
+                <Route path="/Login" element={<Login/>} />
+                <Route path="/Upload" element={<Upload/>} />
+            </Routes>
+            <Footer />
         </div>
     )
 };
