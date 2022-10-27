@@ -12,16 +12,11 @@
     outline-offset: 0;
 }
 
-a, a:hover {
+.eh_sreekar, .eh_sreekar:hover {
     text-decoration: none ;
 }
-a:hover {
+.eh_sreekar:hover {
     color: var(--primary-color) !important;
-}
-
-ul, ol {
-    margin: 0;
-    padding: 0;
 }
 
 :root {
@@ -203,14 +198,14 @@ html {
     padding: 13rem 0 9.375rem;
 }
 
-.about-section .card, .about-section .card img {
+.about-section .card, .about-section .card .card-image_sreekar {
     border-radius: 0.625rem;
     transition: all 0.5s ease;
 }
 
 
 
-.card img:hover {
+.card .card-image_sreekar:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px #000;
 }
@@ -231,10 +226,10 @@ html {
     text-align: center;
 }
 
-.story-section h2 {
+.story-section .hech2_sreekar {
     color: var(--white-color);
 }
-.story-section p {
+.story-section .pee_sreekar {
     color: white;
 }
 
@@ -355,45 +350,18 @@ html {
     opacity: 1;
 }
 
-
-/* .carousel .item {
-    height: 300px;
-  } */
-  
-  /* .carousel-item img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-height: 300px;
-  } */
-
-
-  .faq button {
+.faq button {
       color: var(--primary-color);
-  }
+}
 
 .faq button:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
-footer a {
-    text-decoration: none !important;
-    color: inherit;
-}
-
-footer a:hover {
-    text-decoration: none;
-    color: #fff;
-}
-
 .end {
     color: #fff !important;
     background-color: #000 !important;
-}
-
-footer {
-    padding-bottom: 0px !important;
 }
 
 #button-addon2 {

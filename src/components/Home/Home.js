@@ -25,12 +25,12 @@ let Home = (props)=>{
                                     illum soluta molestiae nihil.</p>
 
                                 <div className="mt-4">
-                                    <a href="http://localhost:3000/Adopt?type=All">
+                                    <a className="eh_sreekar" href="http://localhost:3000/Adopt?type=All">
                                     <button className="main-btn" id="banner-adopt-button">
                                         Adopt A Pet
                                     </button>
                                 </a>
-                                <a href="http://localhost:3000/Upload">
+                                <a className="eh_sreekar" href="http://localhost:3000/Upload">
                                     <button className="white-btn ms-lg-4 mt-lg-0 mt-4">
                                         Find Owner
                                     </button>
@@ -50,14 +50,14 @@ let Home = (props)=>{
                         <div className="row align-items-center">
                             <div className="col-lg-7 col-md-12 mb-lg-0 mb-5">
                                 <div className="card border-0 sreekar">
-                                    <img src={homeImg7} className="img-fluid" alt="" />
+                                    <img src={homeImg7} className="card-image_sreekar img-fluid" alt="" />
                                 </div>
                             </div>
                             <div className="col-lg-5 col-md-12 text-sec">
                                 <h2 className="hech2_sreekar" style={{color:"white"}}>About Us</h2>
                                 <p className="pee_sreekar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam corrupti repudiandae?
                                     Minus asperiores ipsum adipisci exercitationem recusand</p>
-                                <a href="http://localhost:3000/DonateUs"><button className="main-btn mt-4">Read More</button></a>
+                                <a className="eh_sreekar" href="http://localhost:3000/DonateUs"><button className="main-btn mt-4">Read More</button></a>
                             </div>
                         </div>
                     </div>
@@ -77,11 +77,11 @@ let Home = (props)=>{
                                         Cupiditate odio dolorum iure nostrum placeat a voluptates neque voluptas. Iusto deserunt
                                         iste nam, magni eius sint, necessitatibus debitis corporis non sequi illo quam tempora
                                         quibusdam exercitationem? Ad, accusantium cum.</p>
-                                    <a href="http://localhost:3000/Rescue"><button className="main-btn mt-4">Rescue A Stray</button></a>
+                                    <a className="eh_sreekar" href="http://localhost:3000/Rescue"><button className="main-btn mt-4">Rescue A Stray</button></a>
                                 </div>
                                 <div className="col-lg-7 col-md-12">
                                     <div className="card border-0">
-                                        <img src={homeImg8} alt="" className="img-fluid" />
+                                        <img src={homeImg8} alt="" className="card-image_sreekar img-fluid" />
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@ let Home = (props)=>{
                                         laboriosam similique et consequatur, optio repellat repellendus, voluptas repudiandae.
                                     </p>
 
-                                    <a href="http://localhost:3000/Blogs"><button className="main-btn mt-3">Read More Blogs</button></a>
+                                    <a className="eh_sreekar" href="http://localhost:3000/Blogs"><button className="main-btn mt-3">Read More Blogs</button></a>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@ let Home = (props)=>{
                                         </div>
 
                                         
-                                        <a href="http://localhost:3000/Adopt?type=All"><div className="card-btn m-3">Adopt A Pet</div></a>
+                                        <a className="eh_sreekar" href="http://localhost:3000/Adopt?type=All"><div className="card-btn m-3">Adopt A Pet</div></a>
                                         <p className="card-text"> We feed the animals rescued</p>
 
                                     </div>
@@ -139,7 +139,7 @@ let Home = (props)=>{
                                             <div className='square-content' id="card2Image" style={{backgroundImage: `url(${homeImg4})`, dataAos:"fade-up"}}></div>
                                         </div>
 
-                                        <a href="http://localhost:3000/Upload"><div className="card-btn m-3">Find Owner</div></a>
+                                        <a className="eh_sreekar" href="http://localhost:3000/Upload"><div className="card-btn m-3">Find Owner</div></a>
                                     
                                         <p className="card-text"> We help them find a new place to live </p>
 
@@ -153,7 +153,7 @@ let Home = (props)=>{
                                             <div className='square-content' id="card3Image" style={{backgroundImage: `url(${homeImg5})`, dataAos:"fade-left"}}></div>
                                         </div>
 
-                                        <a href="http://localhost:3000/Rescue"><div className="card-btn m-3">Rescue A Stray</div></a>
+                                        <a className="eh_sreekar" href="http://localhost:3000/Rescue"><div className="card-btn m-3">Rescue A Stray</div></a>
                                         <p className="card-text"> Lorem ipsum dolor sit. sdkfhj; </p>
                                     </div>
                                 </div>
@@ -288,7 +288,7 @@ let Home = (props)=>{
                                 </div>
                             </div>
                         </div>
-                    </div>
+                   
                     <div className="accordion-item">
                         <h2 className="hech2_sreekar, accordion-header">
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -303,7 +303,8 @@ let Home = (props)=>{
                                 nostrum explicabo corporis quam ratione quidem in dignissimos, debitis eum dolorum, voluptatum
                                 consequatur nihil adipisci voluptates consequuntur laborum laboriosam id beatae mollitia? Vel, a
                                 corporis.
-                            </div>
+                            </div> </div>
+                    
                         </div>
                     </div>
                 </div>
