@@ -63,7 +63,7 @@ let Upload = (props) => {
                 console.log(err);
             })
 
-        navigate("/Adopt")
+        navigate(`/PetInformation/${temp}`)
     }
 
     let HandleInputChange = (event) => {
