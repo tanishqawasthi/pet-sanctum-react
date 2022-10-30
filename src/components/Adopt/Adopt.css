@@ -89,7 +89,7 @@ footer {
 }
 
 
-.square-box{
+.square-box_tanishq{
     position: relative;
     width: 60%;
     overflow: hidden;
@@ -98,12 +98,12 @@ footer {
     transition: all 0.3s ease;
 }
 
-.square-box:hover {
+.square-box_tanishq:hover {
     border-radius: 0px;
     transform: scale(1.5) translateY(20%);
 }
 
-.square-box:before{
+.square-box_tanishq:before{
     content: "";
     display: block;
     padding-top: 100%;
