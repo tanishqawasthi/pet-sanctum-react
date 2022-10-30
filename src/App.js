@@ -1,10 +1,11 @@
-import MainApp from "./components/MainApp/MainApp";
-import { Button } from 'react-bootstrap';
-
+import MainApp from "./MainApp";
+import { BrowserRouter as Router } from "react-router-dom"
 
 function App() {
   return (
-    <MainApp/>
+    <Router>
+      <MainApp/>
+    </Router>
   );
 }
 
