@@ -8,6 +8,7 @@ import Upload from "./components/Upload/Upload"
 import Test from "./components/Test/Test"
 import Rescue from "./components/Rescue/Rescue"
 import PetInformation from "./components/PetInformation/PetInformation"
+import Signup from "./components/Signup/Signup"
 
 let MainApp = (props)=>{
     return (
@@ -20,6 +21,7 @@ let MainApp = (props)=>{
                 <Route path="/Login" element={<Login/>} />
                 <Route path="/Upload" element={<Upload/>} />
                 <Route path="/PetInformation/:id" element={<PetInformation/>} />
+                <Route path="/Signup" element={<Signup/>} />
             </Routes>
             <Footer />
         </div>

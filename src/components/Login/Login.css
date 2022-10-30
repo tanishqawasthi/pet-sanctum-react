@@ -4,8 +4,6 @@ body{
     margin: 0;
 }
  
-    
-
 .container_login{
     width:100%;
     min-height: 100vh;
@@ -111,7 +109,7 @@ form #form_login {
     height:20px;
     position: absolute;
     bottom:12px;
-    right: 5px;
+    right: -55px;
     visibility: collapse;
     
 }
@@ -121,7 +119,7 @@ form #form_login {
     height:18px;
     position: absolute;
     bottom:13px;
-    right: 5px;
+    right: -62px;
 }
 .label_class_login{
     position: absolute;
@@ -135,7 +133,7 @@ form #form_login {
 }
 .input_login {
     outline: none;
-    width:100%;
+    width:130%;
     border: 2px solid rgba(106, 18, 156,0.5);
     background: none;
     padding: 0.6rem 1.2rem;
@@ -152,12 +150,7 @@ form #form_login {
     color:red;
 
 }
-input:hover~label.label_class_login,
-   input:focus~label.label_class_login,
-  input:valid~label.label_class_login
-  {
-    visibility:hidden;
-  } 
+
 .btn_login {
     display: flex;
     width:120%;
