@@ -16,7 +16,7 @@ let PetCard = (props) => {
           <p className="card-text mb-0"> {props.data.breed} </p>
           <p className="card-text mt-0"> {props.data.pincode} </p>
           <div className="">
-            <a href={`/Pet?id=${props.data._id.uid}`} target="blank">
+            <a href={`/Pet?id=${props.data.id}`} target="blank">
               <button type="button" className="btn m-2 text-dark adopt-btn">
                 Know More
               </button>

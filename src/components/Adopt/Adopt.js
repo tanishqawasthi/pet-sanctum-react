@@ -3,16 +3,33 @@ import Filters from "./Filters"
 import SearchBar from "./SearchBar";
 import ListPets from "./ListPets";
 import { useState, useEffect }  from "react"
+import axios from "axios";
 
 let Adopt = (props) => {
     
     let data = require("../../database/pets.json");
-
+    let [totalData, changeTotalData] = useState([]);
     let [filterState, changeFilter] = useState("all");
-    let [dataShow, changeData] = useState(data);
+    let [dataShow, changeData] = useState([]);
+
+    useEffect(()=>{
+
+        axios.get("http://localhost:3000/Pets")
+            .then(res=>{
+                console.log(res.data);
+                changeData(res.data);
+                changeTotalData(res.data);
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+
+    },[])
+
 
     useEffect(()=>{
         if(filterState == "all") {
+            changeData(totalData)
             return;
         }
         let temp = data.filter((elmt, index)=>{
@@ -20,7 +37,7 @@ let Adopt = (props) => {
         });
         console.log(temp);
         changeData(temp)
-    },[filterState]);
+    },[filterState, totalData]);
 
     let onChangeFilter = (event)=>{
 
@@ -42,7 +59,9 @@ let Adopt = (props) => {
                         
                         <div className="container">
 
-                            <ListPets dataShow={dataShow}/>
+                            { dataShow.length == 0 && <h3>Loading!</h3>}
+                            { dataShow.length != 0 && <ListPets dataShow={dataShow}/>}
+                            
 
                         </div>
                     </div>

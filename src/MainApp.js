@@ -16,6 +16,7 @@ let MainApp = (props)=>{
                 <Route path="/Adopt" element={<Adopt/>} />
                 <Route path="/Login" element={<Login/>} />
                 <Route path="/Upload" element={<Upload/>} />
+                <Route path="/Test" element={<Test/>} />
             </Routes>
             <Footer />
         </div>

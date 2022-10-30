@@ -1,8 +1,6 @@
 [
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc49"
-    },
+    "id":"627555cb954f952ff2acdc49",
     "name": "Lucy",
     "type": "Dog",
     "sex": "Female",
@@ -22,9 +20,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc4a"
-    },
+    "id":"627555cb954f952ff2acdc4a",
     "name": "Mickey",
     "type": "Cat",
     "sex": "Male",
@@ -44,9 +40,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc4b"
-    },
+    "id":"627555cb954f952ff2acdc4b",
     "name": "Kelly",
     "type": "Fish",
     "sex": "Female",
@@ -66,9 +60,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc4c"
-    },
+    "id":"627555cb954f952ff2acdc4c",
     "name": "Munchy",
     "type": "Cat",
     "sex": "Female",
@@ -88,9 +80,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc4d"
-    },
+    "id":"627555cb954f952ff2acdc4d",
     "name": "Bruno",
     "type": "Dog",
     "sex": "Male",
@@ -110,9 +100,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc4e"
-    },
+    "id":"627555cb954f952ff2acdc4e",
     "name": "Bloop",
     "type": "Fish",
     "sex": "Female",
@@ -132,9 +120,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc4f"
-    },
+    "id":"627555cb954f952ff2acdc4f",
     "name": "Chat",
     "type": "Dog",
     "sex": "Male",
@@ -154,9 +140,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc50"
-    },
+    "id":"627555cb954f952ff2acdc50",
     "name": "Tollo",
     "type": "Fish",
     "sex": "Male",
@@ -176,9 +160,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "627555cb954f952ff2acdc51"
-    },
+    "id":"627555cb954f952ff2acdc51",
     "name": "Kitty",
     "type": "Cat",
     "sex": "Female",
@@ -198,9 +180,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "6275570eff6adea9c13bf169"
-    },
+    "id":"6275570eff6adea9c13bf169",
     "name": "test pet",
     "type": "Dog",
     "sex": "Female",
@@ -220,9 +200,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "6276ba86ac25351d56b22203"
-    },
+    "id":"6276ba86ac25351d56b22203",
     "name": "dtddgfh",
     "type": "Dog",
     "sex": "Female",
@@ -242,9 +220,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c85a0365323df191b665f"
-    },
+    "id":"630c85a0365323df191b665f",
     "name": "edfsgdf",
     "type": "Dog",
     "sex": "Female",
@@ -264,9 +240,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c8865831de1f7ade6b553"
-    },
+    "id":"630c8865831de1f7ade6b553",
     "name": "sdf",
     "type": "Dog",
     "sex": "Female",
@@ -286,9 +260,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c8a136d4da53344ad3636"
-    },
+    "id":"630c8a136d4da53344ad3636",
     "name": "Sree",
     "type": "Dog",
     "sex": "Female",
@@ -308,9 +280,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c8d82e1986baf6467c16c"
-    },
+    "id":"630c8d82e1986baf6467c16c",
     "name": "rty8rtuyt",
     "type": "Dog",
     "sex": "NA",
@@ -330,9 +300,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c8ea1b5d1f31ea22fe74f"
-    },
+    "id":"630c8ea1b5d1f31ea22fe74f",
     "name": "fghkjfy",
     "type": "Dog",
     "sex": "NA",
@@ -352,9 +320,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c957c63886421e959f0b6"
-    },
+    "id":"630c957c63886421e959f0b6",
     "name": "fggh",
     "type": "Dog",
     "sex": "NA",
@@ -374,9 +340,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c964f79f0fa38b7032e0d"
-    },
+    "id":"630c964f79f0fa38b7032e0d",
     "name": "Sreekar",
     "type": "Dog",
     "sex": "NA",
@@ -396,9 +360,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c96b42180037192d50501"
-    },
+    "id":"630c96b42180037192d50501",
     "name": "fdghjdfgj",
     "type": "Dog",
     "sex": "NA",
@@ -418,9 +380,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c97f70f1e040e86a7b52e"
-    },
+    "id":"630c97f70f1e040e86a7b52e",
     "name": "Nsam",
     "type": "Dog",
     "sex": "NA",
@@ -440,9 +400,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "uid": "630c9d51110834ff1b79780d"
-    },
+    "id":"630c9d51110834ff1b79780d",
     "name": "sdds",
     "type": "Dog",
     "sex": "Female",
