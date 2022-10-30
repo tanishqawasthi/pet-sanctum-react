@@ -22,6 +22,9 @@ let Navbar1 = (props) => {
                 <Link to={"/Rescue"} style={{textDecoration:"none"}}>
                     Rescue Page
                 </Link>
+                <Link to={"/PetInformation"} style={{textDecoration:"none"}}>
+                    Pet Information
+                </Link>
             </div>
         </div>
     )

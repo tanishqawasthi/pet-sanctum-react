@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer"
 import Upload from "./components/Upload/Upload"
 import Test from "./components/Test/Test"
 import Rescue from "./components/Rescue/Rescue"
+import PetInformation from "./components/PetInformation/PetInformation"
 
 let MainApp = (props)=>{
     return (
@@ -18,7 +19,7 @@ let MainApp = (props)=>{
                 <Route path="/Rescue" element={<Rescue />} />
                 <Route path="/Login" element={<Login/>} />
                 <Route path="/Upload" element={<Upload/>} />
-                <Route path="/Test" element={<Test/>} />
+                <Route path="/PetInformation/:id" element={<PetInformation/>} />
             </Routes>
             <Footer />
         </div>
