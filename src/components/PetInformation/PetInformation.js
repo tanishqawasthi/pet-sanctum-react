@@ -7,177 +7,183 @@ const PetInformation = (props) => {
     let [data, setData] = useState({});
     let temp = useParams()
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        axios.get("")
-            .then(res=>{
-                setData(res,data);
+        axios.get(`http://localhost:3000/Pets/${temp.id}`)
+            .then(res => {
+                console.log(res.data);
+                setData(res.data);
             })
-            .catch(err=>{
+            .catch(err => {
                 console.log(err);
             })
 
     }, []);
 
-    return(
-    <div class="page-content page-container" id="page-content">
-                <div class="padding">
-                    <div class="row container d-flex justify-content-center">
-                        <div class="col-xl-8 col-md-12">
-                            <div class="card user-card-full">
-                                <div class="row m-l-0 m-r-0">
-                                    <div
-                                        class="col-sm-4 bg-c-lite-green user-profile d-flex justify-content-center align-items-center">
-                                        <div class="card-block text-center text-white">
-                                            <div class="m-b-25 pet-img"
-                                                style="background-image: url('<%= data.imageUrl %>');">
-                                            </div>
-                                            <h6 class="f-w-600 lead">
-                                                {props.data.name}
-                                            </h6>
-                                            <p class="mb-2">
-                                                {props.data.breed}
-                                            </p>
+    // <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+    //                                         data-bs-keyboard="false" tabindex="-1"
+    //                                         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    //                                         <div className="modal-dialog">
+    //                                             <div className="modal-content">
+    //                                                 <div className="modal-header">
+    //                                                     <h5 className="modal-title" id="staticBackdropLabel">Are you
+    //                                                         sure?</h5>
+    //                                                     <button type="button" className="btn-close"
+    //                                                         data-bs-dismiss="modal" aria-label="Close"></button>
+    //                                                 </div>
+    //                                                 <div className="modal-footer">
+    //                                                     <button type="button" className="btn btn-danger"
+    //                                                         data-bs-dismiss="modal">Abort</button>
+    //                                                     <a href="/adoptPet?id=<%= data._id %>">
+    //                                                         <button type="button"
+    //                                                             className="btn btn-success">Adopt</button> </a>
+    //                                                 </div>
+    //                                             </div>
+    //                                         </div>
+    //                                     </div>
 
+    return (
+        <div className="page-content page-container" id="page-content">
+            <div className="padding">
+                <div className="row container d-flex justify-content-center">
+                    <div className="col-xl-8 col-md-12">
+                        <div className="card user-card-full">
+                            <div className="row m-l-0 m-r-0">
+                                <div
+                                    className="col-sm-4 bg-c-lite-green user-profile d-flex justify-content-center align-items-center">
+                                    <div className="card-block text-center text-white">
+                                        <div className="m-b-25 pet-img"
+                                            style={{
+                                                backgroundImage: `url(${data.imageUrl})`,
+                                            }}
+                                            >
                                         </div>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="card-block">
-                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Pet Profile</h6>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Animal</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.type}
-                                                    </h6>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Age</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.age}
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Sex</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.sex}
-                                                    </h6>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Good with Humans</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.otherhumans}
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Good with Other Pets</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.otherpets}
-                                                    </h6>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Trained</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.trained}
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Vaccinated</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.vaccinated}
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Owner Information</h6>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Owner's Name</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.owner}
-                                                    </h6>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Owner's Phone Number</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.phone}
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Owner's Address</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.address}
-                                                    </h6>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <p class="m-b-10 f-w-600">Owner's Pincode</p>
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.pincode}
-                                                    </h6>
-                                                </div>
-                                            </div>
-
-
-
-
-                                            <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Additional Information
-                                            </h6>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <h6 class="text-muted f-w-400">
-                                                        {props.data.additional}
-                                                    </h6>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12 my-4">
-                                                    
-                                                        <button class="btn adopt-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                                            Adopt Now
-                                                        </button>
-                                                   
-                                                </div>
-                                            </div>
-
-                                            
-                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                                data-bs-keyboard="false" tabindex="-1"
-                                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">Are you
-                                                                sure?</h5>
-                                                            <button type="button" class="btn-close"
-                                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-danger"
-                                                                data-bs-dismiss="modal">Abort</button>
-                                                            <a href="/adoptPet?id=<%= data._id %>">
-                                                            <button type="button"
-                                                                class="btn btn-success">Adopt</button> </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
+                                        <h6 className="f-w-600 lead">
+                                            {data.name}
+                                        </h6>
+                                        <p className="mb-2">
+                                            {data.breed}
+                                        </p>
 
                                     </div>
+                                </div>
+                                <div className="col-sm-8">
+                                    <div className="card-block">
+                                        <h6 className="m-b-20 p-b-5 b-b-default f-w-600">Pet Profile</h6>
+                                        <div className="row">
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Animal</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.type}
+                                                </h6>
+                                            </div>
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Age</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.age}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Sex</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.sex}
+                                                </h6>
+                                            </div>
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Good with Humans</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.otherhumans}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Good with Other Pets</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.otherpets}
+                                                </h6>
+                                            </div>
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Trained</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.trained}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Vaccinated</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.vaccinated}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Owner Information</h6>
+                                        <div className="row">
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Owner's Name</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.owner}
+                                                </h6>
+                                            </div>
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Owner's Phone Number</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.phone}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Owner's Address</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.address}
+                                                </h6>
+                                            </div>
+                                            <div className="col-sm-6">
+                                                <p className="m-b-10 f-w-600">Owner's Pincode</p>
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.pincode}
+                                                </h6>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Additional Information
+                                        </h6>
+                                        <div className="row">
+                                            <div className="col-sm-12">
+                                                <h6 className="text-muted f-w-400">
+                                                    {data.additional}
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-sm-12 my-4">
+
+                                                <button className="btn adopt-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                    Adopt Now
+                                                </button>
+
+                                            </div>
+                                        </div>
+
+
+                                        
+
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 

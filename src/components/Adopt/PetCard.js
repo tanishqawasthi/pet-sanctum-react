@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom" 
+
 let PetCard = (props) => {
   return (
     <div className="col-md-6 col-lg-3">
@@ -16,11 +18,13 @@ let PetCard = (props) => {
           <p className="mb-0"> {props.data.breed} </p>
           <p className="mt-0"> {props.data.pincode} </p>
           <div className="">
-            <a href={`/Pet?id=${props.data.id}`} target="blank">
+            <Link to={`/PetInformation/${props.data.id}`} >
+  
               <button type="button" className="btn m-2 text-dark adopt-btn">
                 Know More
               </button>
-            </a>
+    
+            </Link>
           </div>
         </div>
       </div>

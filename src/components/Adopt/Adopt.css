@@ -59,6 +59,11 @@
     color: #fff !important;
 }
 
+.filter-btn-clicked {
+    background-color: #e5345b;
+    color: #fff !important;
+}
+
 .active-btn, .adopt-btn, .email-btn {
     background-color: #e5345b !important;
     color: #fff !important;
