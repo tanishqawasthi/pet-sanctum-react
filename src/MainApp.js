@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom"
 import Footer from "./components/Footer/Footer"
 import Upload from "./components/Upload/Upload"
 import Test from "./components/Test/Test"
+import Rescue from "./components/Rescue/Rescue"
 
 let MainApp = (props)=>{
     return (
@@ -14,6 +15,7 @@ let MainApp = (props)=>{
             <Routes>
                 <Route index element={<Home/>} />
                 <Route path="/Adopt" element={<Adopt/>} />
+                <Route path="/Rescue" element={<Rescue />} />
                 <Route path="/Login" element={<Login/>} />
                 <Route path="/Upload" element={<Upload/>} />
                 <Route path="/Test" element={<Test/>} />
