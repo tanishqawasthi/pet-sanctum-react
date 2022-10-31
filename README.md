@@ -20,3 +20,4 @@ To run the react app, type the following command-
 npm start
 
 If on running the react application, it asks to run the application on a port other than 3000, allow it to do so by typing yes.
+
