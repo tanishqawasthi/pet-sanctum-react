@@ -9,6 +9,10 @@ import homeImg6 from "./Homeimages/testimonials/modiji.jpg"
 import homeImg7 from "./Homeimages/154189.jpg"
 import homeImg8 from "./Homeimages/img.webp"
 
+
+import Accordion from 'react-bootstrap/Accordion';
+import Carousel from 'react-bootstrap/Carousel';
+
 let Home = (props)=>{
 
     return (
@@ -19,7 +23,7 @@ let Home = (props)=>{
                         <div className="row">
                             <div className="col-lg-5 col-md-6">
                                 <h1 className="hech1_sreekar" style={{color: "white"}}>Providing All Animals Homes.</h1>
-                                <p style={{color: "white"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                                <p className = "pee_sreekar" style={{color: "white"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
                                     veritatis ducimus dolor harum
                                     neque consectetur ratione nisi sed architecto, atque et ipsum, esse laborum labore deleniti
                                     illum soluta molestiae nihil.</p>
@@ -212,102 +216,68 @@ let Home = (props)=>{
                         </div>
                     </div>
                 </div>
+
             </section>
 
             <section className="p-5 faq" id="questions" data-aos="fade-up">
-                <div className="container">
+
+                <Accordion defaultActiveKey="0">
                     <h2 className="hech2_sreekar, text-center mb-4">
                         Frequently Asked Questions
                     </h2>
-                    <div className="accordion accordion-flush" id="questions">
-                        <div className="accordion-item">
-                            <h2 className="hech2_sreekar, accordion-header">
-                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#one">
-                                    Where are you located?
-                                </button>
-                            </h2>
-                            <div id="one" className="accordion-collapse collapse" data-bs-parent="#questions">
-                                <div className="accordion-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur iste error molestiae
-                                    magnam dolor unde repellat quo, laborum amet culpa saepe, quaerat nobis ducimus nulla aut
-                                    laboriosam voluptas mollitia, velit dolorum dignissimos. Laboriosam vero aperiam asperiores,
-                                    doloremque maiores, hic sit repellendus, rerum labore aspernatur odio aut accusamus quaerat
-                                    quos dolores?
-                                </div>
-                            </div>
-                        </div>
-                        <div className="accordion-item">
-                            <h2 className="hech2_sreekar, accordion-header">
-                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#two">
-                                    What do I need to know?
-                                </button>
-                            </h2>
-                            <div id="two" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                <div className="accordion-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti animi non nemo,
-                                    nulla expedita blanditiis, commodi consequatur explicabo distinctio repudiandae! Facere
-                                    vitae sequi qui magnam ea. Officia enim qui quasi, voluptate dignissimos autem optio nulla
-                                    doloribus eveniet fugit omnis adipisci iure voluptatibus in tenetur earum natus cupiditate
-                                    obcaecati aperiam.
-                                </div>
-                            </div>
-                        </div>
-                        <div className="accordion-item">
-                            <h2 className="hech2_sreekar, accordion-header">
-                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#three">
-                                    How much does it cost?
-                                </button>
-                            </h2>
-                            <div id="three" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                <div className="accordion-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti distinctio ducimus
-                                    provident, officiis quibusdam beatae nihil ab sit? Iusto quaerat nobis veniam maxime rerum.
-                                    Laudantium nostrum explicabo corporis quam ratione quidem in dignissimos, debitis eum
-                                    dolorum, voluptatum consequatur nihil adipisci voluptates consequuntur laborum laboriosam id
-                                    beatae mollitia? Vel, a corporis.
-                                </div>
-                            </div>
-                        </div>
-                        <div className="accordion-item">
-                            <h2 className="hech2_sreekar, accordion-header">
-                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#four">
-                                    How do I sign up?
-                                </button>
-                            </h2>
-                            <div id="four" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                <div className="accordion-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti distinctio ducimus
-                                    provident, officiis quibusdam beatae nihil ab sit? Iusto quaerat nobis veniam maxime rerum.
-                                    Laudantium nostrum explicabo corporis quam ratione quidem in dignissimos, debitis eum
-                                    dolorum, voluptatum consequatur nihil adipisci voluptates consequuntur laborum laboriosam id
-                                    beatae mollitia? Vel, a corporis.
-                                </div>
-                            </div>
-                        </div>
-                   
-                    <div className="accordion-item">
-                        <h2 className="hech2_sreekar, accordion-header">
-                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#five">
-                                What can I expect out of your courses?
-                            </button>
-                        </h2>
-                        <div id="five" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div className="accordion-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti distinctio ducimus provident,
-                                officiis quibusdam beatae nihil ab sit? Iusto quaerat nobis veniam maxime rerum. Laudantium
-                                nostrum explicabo corporis quam ratione quidem in dignissimos, debitis eum dolorum, voluptatum
-                                consequatur nihil adipisci voluptates consequuntur laborum laboriosam id beatae mollitia? Vel, a
-                                corporis.
-                            </div> </div>
-                    
-                        </div>
-                    </div>
-                </div>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>Where are you located?</Accordion.Header>
+                        <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>What do I need to know?</Accordion.Header>
+                        <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>How much does it cost?</Accordion.Header>
+                        <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>How do I sign up?</Accordion.Header>
+                        <Accordion.Body>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                </Accordion>
+
             </section>
         
         </React.Fragment>
