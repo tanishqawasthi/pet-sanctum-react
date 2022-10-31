@@ -1,8 +1,6 @@
 [
   {
-    "_id": {
-      "$oid": "627555cb954f952ff2acdc54"
-    },
+    "id": "627555cb954f952ff2acdc54",
     "fname": "Tejas",
     "lname": "Parse",
     "phone": {
@@ -84,9 +82,7 @@
     "__v": 20
   },
   {
-    "_id": {
-      "$oid": "627555cb954f952ff2acdc55"
-    },
+    "id": "627555cb954f952ff2acdc55",
     "fname": "Tanishq",
     "lname": "Awasthi",
     "phone": {
@@ -106,9 +102,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "$oid": "627555cb954f952ff2acdc56"
-    },
+    "id": "627555cb954f952ff2acdc56",
     "fname": "Jayanth",
     "lname": "Korra",
     "phone": {
@@ -128,9 +122,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "$oid": "627555cb954f952ff2acdc57"
-    },
+    "id": "627555cb954f952ff2acdc57",
     "fname": "Sreekar",
     "lname": "Vankayalapati",
     "phone": {
@@ -150,9 +142,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "$oid": "627555cb954f952ff2acdc58"
-    },
+    "id": "627555cb954f952ff2acdc58",
     "fname": "Nitant",
     "lname": "Kumar",
     "phone": {
@@ -172,9 +162,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "$oid": "627555cb954f952ff2acdc59"
-    },
+    "id": "627555cb954f952ff2acdc59",
     "fname": "Rahul",
     "lname": "Raj",
     "phone": {
@@ -194,9 +182,7 @@
     "__v": 0
   },
   {
-    "_id": {
-      "$oid": "627555cb954f952ff2acdc5a"
-    },
+    "id": "627555cb954f952ff2acdc5a",
     "fname": "Gulshan",
     "lname": "Kumar",
     "phone": {

@@ -3,24 +3,47 @@ import Filters from "./Filters"
 import SearchBar from "./SearchBar";
 import ListPets from "./ListPets";
 import { useState, useEffect }  from "react"
+import axios from "axios";
 
 let Adopt = (props) => {
     
     let data = require("../../database/pets.json");
-
+    let [totalData, changeTotalData] = useState([]);
     let [filterState, changeFilter] = useState("all");
-    let [dataShow, changeData] = useState(data);
+    let [dataShow, changeData] = useState([]);
+    let [isLoad, LoadChange] = useState(true);
 
     useEffect(()=>{
+        
+        axios.get("http://localhost:3000/Pets")
+            .then(res=>{
+                console.log(res.data);
+                changeData(res.data);
+                changeTotalData(res.data);
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+
+    },[])
+
+
+    useEffect(()=>{
+        LoadChange(true)
         if(filterState == "all") {
+            changeData(totalData)
+            LoadChange(false)
             return;
         }
         let temp = data.filter((elmt, index)=>{
             return elmt.type.toLowerCase()==filterState;
         });
+
+        LoadChange(false)
+
         console.log(temp);
         changeData(temp)
-    },[filterState]);
+    },[filterState, totalData]);
 
     let onChangeFilter = (event)=>{
 
@@ -32,7 +55,7 @@ let Adopt = (props) => {
     return (
         <div>
             <SearchBar/>
-            <Filters onChangeFilter = {onChangeFilter} />
+            <Filters onChangeFilter = {onChangeFilter} currentFilter = {filterState} />
             <div id="cards1" className="py-4">
                 <div className="container">
                     <div className="title text-center">
@@ -42,7 +65,10 @@ let Adopt = (props) => {
                         
                         <div className="container">
 
-                            <ListPets dataShow={dataShow}/>
+                            { isLoad && <h3>Loading!</h3>}
+                            { !isLoad && dataShow.length != 0 && <ListPets dataShow={dataShow}/>}
+                            { !isLoad && dataShow.length == 0 && <h3>No Pets Available</h3>}
+                            
 
                         </div>
                     </div>

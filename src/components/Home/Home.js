@@ -169,7 +169,7 @@ let Home = (props)=>{
 
             <section id="testimonials" data-aos="fade-up">
                 <div className="wrapper testimonial-section">
-                    <div className="container" text-center>
+                    <div className="container text-center">
                         <div className="text-center pb-4">
                             <h2 className="hech2_sreekar" style={{color: "var(--primary-color)"}}>Testimonials</h2>
                         </div>
