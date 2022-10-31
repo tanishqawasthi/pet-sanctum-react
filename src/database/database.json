@@ -835,6 +835,7 @@
       "id": 1667150019033
     },
     {
+<<<<<<< HEAD
       "type": "Cat",
       "age": "NA",
       "sex": "Male",
@@ -852,6 +853,25 @@
       "name": "Jack",
       "breed": "Don't know",
       "id": 1667189484921
+=======
+      "type": "Dog",
+      "age": "2",
+      "sex": "Male",
+      "otherhumans": "Yes",
+      "otherpets": "Yes",
+      "trained": "Yes",
+      "vaccinated": "Yes",
+      "additional": "No",
+      "imageUrl": "https://www.davpetlovers.com/wp-content/uploads/2020/04/IMG_8917.jpg",
+      "owner": "Team Pet Sanctum",
+      "phone": "9878788234",
+      "address": "address2",
+      "isAdopt": "-1",
+      "pincode": "500013",
+      "name": "Bruno",
+      "breed": "Pug",
+      "id": 1667191836287
+>>>>>>> 63b01ec7e0144d8bd10ba618dad18ec42938b3fb
     }
   ]
 }

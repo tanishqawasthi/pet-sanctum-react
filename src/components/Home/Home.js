@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css";
+import { Link } from 'react-router-dom';
 import homeImg1 from "./Homeimages/stray-dof-sarfraz-scaled.jpg"
 import homeImg2 from "./Homeimages/background.jpg"
 import homeImg3 from "./Homeimages/stray2.jpg"
@@ -29,16 +30,20 @@ let Home = (props)=>{
                                     illum soluta molestiae nihil.</p>
 
                                 <div className="mt-4">
-                                    <a className="eh_sreekar" href="http://localhost:3000/Adopt?type=All">
-                                    <button className="main-btn" id="banner-adopt-button">
-                                        Adopt A Pet
-                                    </button>
-                                </a>
-                                <a className="eh_sreekar" href="http://localhost:3000/Upload">
-                                    <button className="white-btn ms-lg-4 mt-lg-0 mt-4">
-                                        Find Owner
-                                    </button>
-                                </a>
+                                    <Link to="/Adopt">
+                                        <button className="main-btn" id="banner-adopt-button">
+                                            Adopt A Pet
+                                        </button>
+                                    </Link>
+                                    <Link to="/Upload">
+                                    
+                                        <button className="white-btn ms-lg-4 mt-lg-0 mt-4">
+                                            Find Owner
+                                        </button>
+                                    </Link>
+            
+                            
+                               
                                 </div>
 
                             </div>
@@ -61,7 +66,10 @@ let Home = (props)=>{
                                 <h2 className="hech2_sreekar" style={{color:"white"}}>About Us</h2>
                                 <p className="pee_sreekar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam corrupti repudiandae?
                                     Minus asperiores ipsum adipisci exercitationem recusand</p>
-                                <a className="eh_sreekar" href="http://localhost:3000/DonateUs"><button className="main-btn mt-4">Read More</button></a>
+                                    <Link to="/DonateUs">
+                                        <button className="main-btn mt-4">Read More</button>
+                                    </Link>
+                    
                             </div>
                         </div>
                     </div>
@@ -81,7 +89,9 @@ let Home = (props)=>{
                                         Cupiditate odio dolorum iure nostrum placeat a voluptates neque voluptas. Iusto deserunt
                                         iste nam, magni eius sint, necessitatibus debitis corporis non sequi illo quam tempora
                                         quibusdam exercitationem? Ad, accusantium cum.</p>
-                                    <a className="eh_sreekar" href="http://localhost:3000/Rescue"><button className="main-btn mt-4">Rescue A Stray</button></a>
+                                        <Link to="/Rescue">
+                                            <button className="main-btn mt-4">Rescue A Stray</button>
+                                        </Link>
                                 </div>
                                 <div className="col-lg-7 col-md-12">
                                     <div className="card border-0">
@@ -105,8 +115,9 @@ let Home = (props)=>{
                                         perspiciatis, recusandae itaque voluptas. Nostrum laudantium dolores velit, soluta
                                         laboriosam similique et consequatur, optio repellat repellendus, voluptas repudiandae.
                                     </p>
-
-                                    <a className="eh_sreekar" href="http://localhost:3000/Blogs"><button className="main-btn mt-3">Read More Blogs</button></a>
+                                    <Link to="/Rescue">
+                                        <button className="main-btn mt-4">Rescue A Stray</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -129,8 +140,10 @@ let Home = (props)=>{
                                             </div>
                                         </div>
 
-                                        
-                                        <a className="eh_sreekar" href="http://localhost:3000/Adopt?type=All"><div className="card-btn m-3">Adopt A Pet</div></a>
+                                        <Link to="/Adopt">
+                       
+                                            <div className="card-btn m-3">Adopt A Pet</div>
+                                        </Link>
                                         <p className="card-text"> We feed the animals rescued</p>
 
                                     </div>
@@ -142,8 +155,10 @@ let Home = (props)=>{
                                         <div className='square-box'>
                                             <div className='square-content' id="card2Image" style={{backgroundImage: `url(${homeImg4})`, dataAos:"fade-up"}}></div>
                                         </div>
-
-                                        <a className="eh_sreekar" href="http://localhost:3000/Upload"><div className="card-btn m-3">Find Owner</div></a>
+                                        <Link to="/Upload">
+                                            <div className="card-btn m-3">Find Owner</div>
+                                        </Link>
+                         
                                     
                                         <p className="card-text"> We help them find a new place to live </p>
 
@@ -156,8 +171,9 @@ let Home = (props)=>{
                                         <div className='square-box'>
                                             <div className='square-content' id="card3Image" style={{backgroundImage: `url(${homeImg5})`, dataAos:"fade-left"}}></div>
                                         </div>
-
-                                        <a className="eh_sreekar" href="http://localhost:3000/Rescue"><div className="card-btn m-3">Rescue A Stray</div></a>
+                                        <Link to="/Rescue">
+                                            <div className="card-btn m-3">Rescue A Stray</div>
+                                        </Link>
                                         <p className="card-text"> Lorem ipsum dolor sit. sdkfhj; </p>
                                     </div>
                                 </div>
