@@ -250,7 +250,7 @@ let Home = (props)=>{
                         </Accordion.Body>
                     </Accordion.Item>
 
-                    <Accordion.Item eventKey="1">
+                    <Accordion.Item eventKey="2">
                         <Accordion.Header>How much does it cost?</Accordion.Header>
                         <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -263,7 +263,7 @@ let Home = (props)=>{
                         </Accordion.Body>
                     </Accordion.Item>
 
-                    <Accordion.Item eventKey="1">
+                    <Accordion.Item eventKey="3">
                         <Accordion.Header>How do I sign up?</Accordion.Header>
                         <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
