@@ -13,6 +13,7 @@ import Blogs from "./components/Blogs/Blogs"
 import Profile from "./components/Profile/Profile"
 import AddBlog from "./components/AddBlog/AddBlog"
 import Contact from "./components/Contact/Contact"
+import BlogRead from "./components/BlogRead/BlogRead";
 
 let MainApp = (props)=>{
     return (
@@ -29,6 +30,7 @@ let MainApp = (props)=>{
                 <Route path="/Signup" element={<Signup/>} />
                 <Route path="/DonateUs" element={<DonateUs/>} />
                 <Route path="/Blogs" element={<Blogs/>} />
+                <Route path="/BlogRead/:id" element={<BlogRead />} />
                 <Route path="/Contact" element={<Contact/>} />
                 <Route path="/Profile" element={<Profile/>} />
             </Routes>

@@ -43,7 +43,7 @@ function Blogs() {
                   <h3> {totalBlog[0].title} </h3>
                   <p>
                     {totalBlog[0].description.substring(0,36)+"..."}
-                    <Link to="http://localhost:3000/BlogRead?uid=1">
+                    <Link to={`/BlogRead/${totalBlog[0].id}`}>
                     Read More
                   </Link>
                   </p>
@@ -60,7 +60,7 @@ function Blogs() {
                   <h3> {totalBlog[1].title} </h3>
                   <p>
                     {totalBlog[1].description.substring(0,36)+"..."}
-                    <Link to="http://localhost:3000/BlogRead?uid=2">
+                    <Link to={`/BlogRead/${totalBlog[1].id}`}>
                     Read More
                   </Link>
                   </p>
@@ -78,7 +78,7 @@ function Blogs() {
                   <h3> {totalBlog[2].title} </h3>
                   <p>
                     {totalBlog[2].description.substring(0,36)+"..."}
-                    <Link to="http://localhost:3000/BlogRead?uid=3">
+                    <Link to={`/BlogRead/${totalBlog[2].id}`}>
                     Read More
                   </Link>
                   </p>
@@ -122,11 +122,11 @@ function Blogs() {
                               {elmt["description"].substring(0, 450) +
                                 "..."}{" "}
                             </p>
-                            <a className="a_sreekar" href="http://localhost:3000/Pet?id=<%= animals[index]._id %>">
+                            <Link className="a_sreekar" to={`/BlogRead/${elmt.id}`}>
                               <Button class="btn btn-outline-primary">
                                 Know More
                               </Button>
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
