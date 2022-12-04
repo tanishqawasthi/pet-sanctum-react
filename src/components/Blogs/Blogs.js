@@ -22,10 +22,10 @@ function Blogs() {
   }, []);
 
   return (
-    <div className="blogs-body_sreekar">
+    <div className="blogs-body_sreekar" >
       <div className="container mt-3">
         <h1 className="text-center text-white p-2">Pet Sanctum Blogs</h1>
-        <hr size="8" className="hr_sreekar"/>
+        <hr size="8" className="hr_sreekar"/> 
 
         <h2 className="text-center mt-2 mb-3 bg-white border-dark rounded d-inline-block p-2 text-center">
           Featured Posts
