@@ -832,17 +832,10 @@
       "id": 1667191836287
     },
     {
-<<<<<<< HEAD
-      "type": "Dog",
-      "age": 0,
-      "sex": "Male",
-      "otherhumans": "No",
-=======
       "type": "Cat",
       "age": 0,
       "sex": "Male",
       "otherhumans": "Yes",
->>>>>>> 746b951cb789478433a724b86a7cb47aa9012b49
       "otherpets": "No",
       "trained": "No",
       "vaccinated": "No",
@@ -853,15 +846,9 @@
       "address": "address2",
       "isAdopt": "-1",
       "pincode": "500013",
-<<<<<<< HEAD
-      "name": "sdf",
-      "breed": "asdf",
-      "id": 1670162097288
-=======
       "name": "This is a cat",
       "breed": "fgddfgh",
       "id": 1667210556527
->>>>>>> 746b951cb789478433a724b86a7cb47aa9012b49
     }
   ]
 }

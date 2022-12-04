@@ -35,7 +35,7 @@ let AddBlogs = (props) => {
         console.log("Submitted!");
         console.log(formInput1);
 
-        axios.post("http://localhost:3000/Blogs", formInput1, {
+        axios.post("http://localhost:3005/Blogs", formInput1, {
             headers: {
                 'Content-Type': 'application/json'
             }
