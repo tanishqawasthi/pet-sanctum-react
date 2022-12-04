@@ -2,16 +2,19 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import BlogCard from "./BlogCard";
+import { Tabs, Tab, Accordion, Button } from "react-bootstrap";
+import './Blogs.css';
 
 function Blogs() {
-  const [posts, setPost] = useState([]);
+  let [totalBlog, changeBlogData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/Blogs")
+      .get("http://localhost:3005/Blogs")
       .then((res) => {
-        console.log(res);
-        setPost(res.data);
+        console.log(res.data);
+
+        changeBlogData(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -19,66 +22,73 @@ function Blogs() {
   }, []);
 
   return (
-    <div>
+    <div className="blogs-body_sreekar">
       <div className="container mt-3">
         <h1 className="text-center text-white p-2">Pet Sanctum Blogs</h1>
-        <hr size="8" />
+        <hr size="8" className="hr_sreekar"/>
 
         <h2 className="text-center mt-2 mb-3 bg-white border-dark rounded d-inline-block p-2 text-center">
           Featured Posts
         </h2>
 
-        <div className="maincontainer">
-          <div className="maincard">
-            <div className="card1">
-              <div className="image">
-                <img href="#" src="" />
-              </div>
-              <div className="content">
-                {/* <h3> blog 0 title </h3> */}
-                <p>
-                  {/* blog 0 description */}
-                  <Link to="http://localhost:3000/BlogRead?uid=1">
+        {totalBlog.length == 0 && <h2>Loading...</h2>}
+        {totalBlog.length != 0 && (
+          <div className="maincontainer_sreekar">
+            <div className="maincard_sreekar">
+              <div className="card1_sreekar">
+                <div className="image_sreekar">
+                  <img href="#" src={totalBlog[0].imageUrl} />
+                </div>
+                <div className="content_sreekar">
+                  <h3> {totalBlog[0].title} </h3>
+                  <p>
+                    {totalBlog[0].description.substring(0,36)+"..."}
+                    <Link to="http://localhost:3000/BlogRead?uid=1">
                     Read More
                   </Link>
-                </p>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="maincard">
-            <div className="card1">
-              <div className="image">
-                <img href="#" src="" />
-              </div>
-              <div className="content">
-                <h3></h3>
-                <p>
-                  <Link to="http://localhost:3000/BlogRead?uid=2">
+            <div className="maincard_sreekar">
+              <div className="card1_sreekar">
+                <div className="image_sreekar">
+                  <img href="#" src={totalBlog[1].imageUrl} />
+                </div>
+                <div className="content_sreekar">
+                  <h3> {totalBlog[1].title} </h3>
+                  <p>
+                    {totalBlog[1].description.substring(0,36)+"..."}
+                    <Link to="http://localhost:3000/BlogRead?uid=2">
                     Read More
                   </Link>
-                </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="maincard_sreekar">
+              <div className="card1_sreekar">
+                <div className="image_sreekar">
+      
+                    <img href="#" src={totalBlog[2].imageUrl} />
+                
+                </div>
+                <div className="content_sreekar">
+                  <h3> {totalBlog[2].title} </h3>
+                  <p>
+                    {totalBlog[2].description.substring(0,36)+"..."}
+                    <Link to="http://localhost:3000/BlogRead?uid=3">
+                    Read More
+                  </Link>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="maincard">
-            <div className="card1">
-              <div className="image">
-                <img href="#" src="" />
-              </div>
-              <div className="content">
-                <h3> </h3>
-                <p>
-                  <Link to="http://localhost:3000/BlogRead?uid=3">
-                    Read More
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        )}
 
-        <hr size="8" className="mt-4" />
+        <hr size="8" className="hr_sreekar mt-4" />
 
         <h2
           className="text-center mt-2 mb-3 bg-white border-dark rounded d-inline-block p-2 text-center"
@@ -89,21 +99,46 @@ function Blogs() {
           Explore Other Posts
         </h2>
 
-        <ul>
-          <div className="">
-            {posts.map((post) => (
-              <BlogCard
-                id={post.id}
-                title={post.title}
-                url={post.imageUrl}
-                btn="Read More"
-              />
-            ))}{" "}
-          </div>
-        </ul>
+        <Tabs>
+          <Tab eventKey="allblogs" title="All Blogs">
+            {totalBlog.length == 0 && <div>Loading...</div>}
+            {totalBlog.length != 0 &&
+              totalBlog.map((elmt) => {
+                return (
+                  <div style={{background: 'white'}} class="row blog pt-4 pb-4 ps-1 mt-4 mb-4 border border-dark" data-aos="flip-up" data-aos-duration="1250">
+                      <div className="blog-body col-12">
+                        <div class="container-fluid row">
+                          <div class="col-4">
+                            <img
+                              src={elmt.imageUrl}
+                              alt=""
+                              style={{ width: "100%" }}
+                            />
+                          </div>
+                          <div class="col-8">
+                            <h4> {elmt.title} </h4>
+                            <p>
+                              {" "}
+                              {elmt["description"].substring(0, 450) +
+                                "..."}{" "}
+                            </p>
+                            <a className="a_sreekar" href="http://localhost:3000/Pet?id=<%= animals[index]._id %>">
+                              <Button class="btn btn-outline-primary">
+                                Know More
+                              </Button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                  
+                  </div>
+                );
+              })}
+          </Tab>
+        </Tabs>
 
-        <Link to="http://localhost:3000/AddBlog">
-          <Button className="btn btn-success">Add Blog</Button>
+        <Link to="/AddBlog">
+          <button className="btn btn-success">Add Blog</button>
         </Link>
       </div>
     </div>
