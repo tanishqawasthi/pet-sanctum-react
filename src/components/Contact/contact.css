@@ -16,14 +16,12 @@ body, input, textarea {
     overflow: hidden;
     display: flex;
     align-items: center;
-    /* align-content: center; */
     justify-content: center;
 }
 
 .form-contact {
     width: 100%;
     max-width: 900px;
-    
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 1px 20px 10px rgba(0,0,0,0.5);
@@ -84,20 +82,13 @@ body, input, textarea {
     line-height:1;
     margin-bottom: 0.7rem;
 }
-/* h1 {
-    color:rgb(26, 48, 48);
-    font-weight: 500;
-    font-size: 2.1rem;
-    line-height:1;
-    margin: 2rem;
-} */
 
 .input-container-contact {
     position: relative;
     margin: 1rem 0;
 }
  
-label {
+.inputlabel {
     position: absolute;
     left: 20px;
     top: 12px;
@@ -152,9 +143,6 @@ textarea.input-contact{
     color: transparent;
     pointer-events: none;
     z-index: 500;
-    /* background:#1abc9c; */
-    /* color:white; */
-    
 }
 .contact-info-contact{
     padding: 15px;
