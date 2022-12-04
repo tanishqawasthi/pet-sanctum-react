@@ -359,10 +359,10 @@ html {
     color: white;
 }
 
-.end {
+/* .end {
     color: #fff !important;
     background-color: #000 !important;
-}
+} */
 
 #button-addon2 {
     background-color: var(--primary-color);
