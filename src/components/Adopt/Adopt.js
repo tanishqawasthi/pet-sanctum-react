@@ -15,8 +15,9 @@ let Adopt = (props) => {
 
     useEffect(()=>{
         
-        axios.get("http://localhost:3000/Pets")
+        axios.get("http://localhost:3005/Pets")
             .then(res=>{
+                data = res.data;
                 console.log(res.data);
                 changeData(res.data);
                 changeTotalData(res.data);
@@ -35,7 +36,7 @@ let Adopt = (props) => {
             LoadChange(false)
             return;
         }
-        let temp = data.filter((elmt, index)=>{
+        let temp = totalData.filter((elmt, index)=>{
             return elmt.type.toLowerCase()==filterState;
         });
 
