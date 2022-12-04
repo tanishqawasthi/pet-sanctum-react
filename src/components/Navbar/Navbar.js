@@ -2,7 +2,11 @@
 import { Link } from "react-router-dom"
 import { Navbar, Container, Nav } from "react-bootstrap";
 
+import { useSelector } from "react-redux";
+
 let Navbar1 = (props) => {
+
+    const isLogged = useSelector(state=> state.isLoggedIn )
     
     return (
         <div>
@@ -25,18 +29,23 @@ let Navbar1 = (props) => {
                 <Link to={"/DonateUs"} style={{textDecoration:"none"}}>
                     Donate Us
                 </Link>
-                <Link to={"/Login"} style={{textDecoration:"none"}}>
-                    Login Page
-                </Link>
-                <Link to={"/Signup"} style={{textDecoration:"none"}}>
-                    Sign Up
-                </Link>
                 <Link to={"/Blogs"} style={{textDecoration:"none"}}>
                     Blogs
                 </Link>
-                <Link to={"/Profile"} style={{textDecoration:"none"}}>
+                { isLogged && <Link to={"/Profile"} style={{textDecoration:"none"}}>
                     Profile
-                </Link>
+                </Link> }
+
+                { !isLogged && <Link to={"/Signup"} style={{textDecoration:"none"}}>
+                    Sign Up
+                </Link> }
+                
+                { !isLogged && <Link to={"/Login"} style={{textDecoration:"none"}}>
+                    Login Page
+                </Link> }
+                
+                
+                
             </div>
         </div>
     )

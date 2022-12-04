@@ -1,13 +1,62 @@
+import axios from "axios";
 import { useState } from "react";
+import { Alert, Button } from "react-bootstrap";
 import "./Login.css";
+import { authActions } from "../../store/index"
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import { getBlur,getFocus,getBlur1,getFocus1,show,show1 } from "./sideEffect_Login";
 
 export default function Login() {
     const [username,setUsername] = useState('');
     const [pwd,setPwd] = useState('');
+  
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
+
+    const [show, setShow] = useState(false);
+
+    let onLogin = (event)=>{
+      event.preventDefault();
+      
+      console.log(username, pwd);
+
+      axios.get(`http://localhost:3005/Profiles?username=${username}`)
+        .then(res=>{
+            console.log(res.data);
+            if(res.data.length === 0) {
+              setShow(true);
+            } else {
+              let loginDetails = res.data[0];
+              if(loginDetails.password == pwd) {
+                dispatch(
+                  authActions.login({
+                    id: loginDetails.id,
+
+                    username: loginDetails.username,
+                    LoginProfile: loginDetails
+                  }) // Inside (), dictionary used (action.payload.username)\
+                )
+                navigate("/"); 
+              } else {
+                setShow(true);
+              }
+            }
+        })
+        .catch(err=>{
+          console.log(err);
+        })
+
+    }
+
   return (
     <>
+      { show && 
+        <Alert key={"danger"} variant={"danger"} onClose={() => setShow(false)} dismissible>
+          Please Enter a valid username and password
+      </Alert>
+     }
       <div className="container_login">
         <div className="page_login">
           <div className="image_login">
@@ -18,7 +67,7 @@ export default function Login() {
           </div>
 
           <div className="form_login">
-            <form name="loginForm" id="form_login">
+            <form name="loginForm" id="form_login" onSubmit={onLogin}>
               <div className="header_login">
                 <img
                   src={process.env.PUBLIC_URL + "/images/best.jfif"}

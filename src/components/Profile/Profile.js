@@ -4,13 +4,29 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom" 
 import axios from "axios"
 import EmptyProfile from "./images/empty_profile.webp"
+import { authActions } from "../../store/index"
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import { useSelector } from "react-redux"
 
 let Profile = ()=>{ 
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const getItem = useSelector(state=> state.isLoggedin)
 
     let isAdmin = true;
     let LoginProfile = {
         fname: "Tejas",
         lname: "Parse"
+    }
+    
+    let onClickLogout = (event)=>{
+        dispatch(
+            authActions.logout({}) // Inside (), dictionary used (action.payload.username)
+        )
+        navigate("/")
     }
 
     let [totalPet, changePetData] = useState([]);
@@ -81,9 +97,9 @@ let Profile = ()=>{
 
                     </p>
                     <p className="fst-italic">Joined Feb 2020</p>
-                    <a href="/Logout">
-                        <button className="btn btn-danger">Log Out</button>
-                    </a>
+                    
+                    <button className="btn btn-danger" onClick={onClickLogout}>Log Out</button>
+                    
                 </div>
 
 
