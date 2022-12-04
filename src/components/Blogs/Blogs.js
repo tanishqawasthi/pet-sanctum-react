@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import BlogCard from "./BlogCard";
 import { Tabs, Tab, Accordion, Button } from "react-bootstrap";
 import './Blogs.css';
 
@@ -23,11 +22,11 @@ function Blogs() {
 
   return (
     <div className="blogs-body_sreekar" >
-      <div className="container mt-3">
+      <div className="container">
         <h1 className="text-center text-white p-2">Pet Sanctum Blogs</h1>
         <hr size="8" className="hr_sreekar"/> 
 
-        <h2 className="text-center mt-2 mb-3 bg-white border-dark rounded d-inline-block p-2 text-center">
+        <h2 className="text-center mx-auto mt-2 mb-3 bg-white border-dark rounded d-inline-block p-2 text-center">
           Featured Posts
         </h2>
 
@@ -136,10 +135,6 @@ function Blogs() {
               })}
           </Tab>
         </Tabs>
-
-        <Link to="/AddBlog">
-          <button className="btn btn-success">Add Blog</button>
-        </Link>
       </div>
     </div>
   );
