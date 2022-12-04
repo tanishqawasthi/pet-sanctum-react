@@ -90,7 +90,7 @@ export default function Contact() {
             >
               <h3 className="title-contact">Contact us</h3>
               <div className="input-container-contact">
-                <label for="l-name-contact" id="l-name-contact">
+                <label className="inputlabel" for="l-name-contact" id="l-name-contact">
                   Name
                 </label>
                 <span id="s-name-contact">Username</span>
@@ -101,7 +101,7 @@ export default function Contact() {
                   className="input-contact"
                   value={username}
                   onChange={(e) => {setUsername(e.target.value)}}
-                  onFocus={getFocus}
+                  onFocus={getFocus} 
                   onBlur={getBlur}
                   required
                 />
@@ -118,7 +118,7 @@ export default function Contact() {
                   onBlur={getBlur2}
                   required
                 />
-                <label for="email-contact" id="l-email-contact">
+                <label className="inputlabel" for="email-contact" id="l-email-contact">
                   Email
                 </label>
 
@@ -136,7 +136,7 @@ export default function Contact() {
                   onBlur={getBlur1}
                   required
                 />
-                <label for="phone-contact" id="l-phone-contact">
+                <label className="inputlabel" for="phone-contact" id="l-phone-contact">
                   Phone
                 </label>
                 <span id="s-phone-contact">Phone</span>
@@ -152,7 +152,7 @@ export default function Contact() {
                   onBlur={getBlur3}
                   required
                 ></textarea>
-                <label for="message-contact" id="l-message-contact">
+                <label className="inputlabel" for="message-contact" id="l-message-contact">
                   Message
                 </label>
                 <span id="s-message-contact">Message</span>
