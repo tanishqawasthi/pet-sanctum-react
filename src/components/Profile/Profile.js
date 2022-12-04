@@ -8,19 +8,27 @@ import { authActions } from "../../store/index"
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
+
+
 import { useSelector } from "react-redux"
 
 let Profile = ()=>{ 
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const getItem = useSelector(state=> state.isLoggedin)
+   
 
-    let isAdmin = true;
-    let LoginProfile = {
-        fname: "Tejas",
-        lname: "Parse"
+    let isLoggedIn = useSelector(state=> state.isLoggedIn);
+
+    if(!isLoggedIn) {
+        navigate("/Login");
     }
+
+    let LoginProfile = useSelector((state=> state.LoginProfile ));
+  
+    let isAdmin = useSelector((state=> state.isAdmin));
     
     let onClickLogout = (event)=>{
         dispatch(
@@ -116,74 +124,109 @@ let Profile = ()=>{
                     <Tab eventKey="edit" title="Edit Profile Info">
                         <form className="row g-3 mt-1" method="post" action="/editProfileInfo?id=<%= LoginProfile._id %>" enctype="multipart/form-data">
                             <div className="col-12 input-group mb-3">
-                                <label className="input-group-text" for="inputGroupFile01">Upload Profile Picture</label>
                                 <input type="file" className="form-control" id="inputGroupFile01" accept="image/*"
                                     onchange="loadFile(event)" name="ProfileImage" />
                             </div>
                             <div className="col-6 form-floating mb-2">
-                                <input type="text" className="form-control" id="inputfName" placeholder="Full Name" name="fname"
-                                    value="<%= LoginProfile.fname %>" required />
-                                <label for="inputfName" className="ms-2 mb-1">First Name</label>
+                                <FloatingLabel
+                                    controlId="floatingInput"
+                                    label="First Name"
+                                    className="mb-3"
+                                >
+                                    <Form.Control type="text" required={true} defaultValue={LoginProfile.fname} placeholder="First Name" />
+                                </FloatingLabel>
+                               
+            
                             </div>
                             <div className="col-6 form-floating mb-2">
-                                <input type="text" className="form-control" id="inputlName" placeholder="Full Name" name="lname"
-                                value="<%= LoginProfile.lname %>" required />
-                                <label for="inputlName" className="ms-2 mb-1">Last Name</label>
+                                <FloatingLabel
+                                        controlId="floatingInput"
+                                        label="Last Name"
+                                        className="mb-3"
+                                >
+                                    <Form.Control type="text" required={true} defaultValue={LoginProfile.lname} placeholder="Last Name" />
+                                </FloatingLabel>
+                               
                             </div>
                             <div className="col-6 form-floating mb-2">
-                                <input type="text" className="form-control" id="inputUsername" placeholder="Username"
-                                value="<%= LoginProfile.username %>"  name="username" required />
-                                <label for="inputUsername" className="ms-2 mb-1">Username</label>
+                                <FloatingLabel
+                                            controlId="floatingInput"
+                                            label="Username"
+                                            className="mb-3"
+                                    >
+                                    <Form.Control type="text" required={true} defaultValue={LoginProfile.username} placeholder="Last Name" />
+                                </FloatingLabel>
+            
                             </div>
                             <div className="col-md-6 form-floating mb-2">
-                                <input type="email" className="form-control" id="floatingInput" name="email"
-                                    placeholder="name@example.com required" value="<%= LoginProfile.email %>" />
-                                <label for="floatingInput" className="ms-2 mb-1">Email address</label>
+                                <FloatingLabel
+                                        controlId="floatingInput"
+                                        label="Email Adress"
+                                        className="mb-3"
+                                >
+                                    <Form.Control type="text" required={true} defaultValue={LoginProfile.email} placeholder="Last Name" />
+                                </FloatingLabel>
                             </div>
                             <div className="input-group mb-3 col-6">
-                                <span className="input-group-text">+91</span>
-                                <div className="form-floating flex-grow-1">
-                                    <input type="number" className="form-control" name="phone" placeholder="Code 1"
-                                        max="9999999999" min="0" required value="<%= LoginProfile.phone %>" />
-                                    <label for="code1">Phone Number</label>
-                                </div>
+                                <FloatingLabel
+                                            controlId="floatingInput"
+                                            label="Phone Number"
+                                            className="mb-3 w-100"
+                                    >
+                                    <Form.Control type="tel" required={true} defaultValue={LoginProfile.phone} placeholder="Last Name" />
+                                </FloatingLabel>
+                        
                             </div>
                             <div className="input-group mb-2 col-6">
-                   
-                                <div className="form-floating flex-grow-1">
-                                    <input name="password" type="password" className="input form-control" id="password" placeholder="Enter New Password" required="true" aria-label="password" aria-describedby="basic-addon1" minlength="9" value="<%= LoginProfile.password %>" />
-                                    
-                                    <label for="password" className="mb-1">Password</label>
-                                </div>
-                                <span className="input-group-text" id="basic-addon1">
-            
-                                    <div className="input-group-append">
-                                      <span className="input-group-text" onclick="password_show_hide();">
-                                        <i className="fas fa-eye" id="show_eye"></i>
-                                        <i className="fas fa-eye-slash d-none" id="hide_eye"></i>
-                                      </span>
-                                    </div>
-            
-                                </span>
+                                <FloatingLabel
+                                        controlId="floatingInput"
+                                        label="Password"
+                                        className="mb-3 w-100"
+                                >
+                                    <Form.Control type="password" required={true} defaultValue={LoginProfile.password} placeholder="Last Name" />
+                                </FloatingLabel>
+    
             
                             </div>
                             <div className="col-12 form-floating mb-2">
-                                <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"
-                                    required value="<%= LoginProfile.address %>" name="address" />
-                                <label for="inputAddress" className="form-label ms-2 mb-1">Address Line</label>
+                                <FloatingLabel
+                                        controlId="floatingInput"
+                                        label="Address"
+                                        className="mb-3"
+                                >
+                                    <Form.Control type="text" required={true} defaultValue={LoginProfile.address} placeholder="Last Name" />
+                                </FloatingLabel>
+                                
                             </div>
                             <div className="col-md-6 form-floating mb-2">
-                                <input type="text" className="form-control" id="inputCity" placeholder="City Name" required value="<%= LoginProfile.city %>" name="city" />
-                                <label for="inputCity" className="form-label ms-2 mb-1">City</label>
+                                <FloatingLabel
+                                        controlId="floatingInput"
+                                        label="City"
+                                        className="mb-3"
+                                >
+                                    <Form.Control type="text" required={true} defaultValue={LoginProfile.city} placeholder="Last Name" />
+                                </FloatingLabel>
+                            
                             </div>
                             <div className="col-md-4 form-floating mb-2">
-                                <input type="text" className="form-control" id="inputState" placeholder="State Name"
-                                    name="state" required value="<%= LoginProfile.state %>" />
-                                <label for="inputState" className="form-label ms-2 mb-1">State</label>
+                                <FloatingLabel
+                                        controlId="floatingInput"
+                                        label="State"
+                                        className="mb-3"
+                                >
+                                    <Form.Control type="text" required={true} defaultValue={LoginProfile.state} placeholder="Last Name" />
+                                </FloatingLabel>
+                        
                             </div>
                             <div className="col-md-2 form-floating mb-2">
-                                <input name="zip" type="text" className="form-control" id="inputZip" placeholder="Zip Code" required value="<%= LoginProfile.zip %>" />
-                                <label for="inputZip" className="form-label ms-2 mb-1" >Zip</label>
+                                <FloatingLabel
+                                        controlId="floatingInput"
+                                        label="Zip Code"
+                                        className="mb-3"
+                                >
+                                    <Form.Control type="text" required={true} defaultValue={LoginProfile.zip} placeholder="Last Name" />
+                                </FloatingLabel>
+
                             </div>
                             <div className="col-12">
                                 <button type="submit" className="btn btn-primary">Edit</button>

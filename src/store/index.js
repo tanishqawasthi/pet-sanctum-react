@@ -5,6 +5,7 @@ const initialState = {
   LoginProfile: {},
   id: "",
   username: "",
+  isAdmin: false
 };
 
 const authSlice = createSlice({
@@ -15,7 +16,12 @@ const authSlice = createSlice({
       state.isLoggedIn = true;
       state.id = action.payload.id;
       state.username = action.payload.username;
-      state.LoginProfile = action.payload.username
+      state.LoginProfile = action.payload.LoginProfile
+      if(state.LoginProfile.isAdmin) {
+        state.isAdmin = true;
+      } else {
+        state.isAdmin = false;
+      }
     },
     logout: (state) => {
 
@@ -25,6 +31,7 @@ const authSlice = createSlice({
       state.id = "";
       state.username = "";
       state.LoginProfile = {}
+      state.isAdmin = false;
     },
   },
 });

@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 let Navbar1 = (props) => {
 
     const isLogged = useSelector(state=> state.isLoggedIn )
+    const isAdmin = useSelector(state=> state.isAdmin )
     
     return (
         <div>
@@ -23,11 +24,16 @@ let Navbar1 = (props) => {
                 <Link to={"/Rescue"} style={{textDecoration:"none"}}>
                     Rescue Page
                 </Link>
-                <Link to={"/AddBlog"} style={{textDecoration:"none"}}>
-                    Add Blog
-                </Link>
+                {
+                    isAdmin && <Link to={"/AddBlog"} style={{textDecoration:"none"}}>
+                        Add Blog
+                    </Link>
+                }
                 <Link to={"/DonateUs"} style={{textDecoration:"none"}}>
                     Donate Us
+                </Link>
+                <Link to={"/Contact"} style={{textDecoration:"none"}}>
+                    Contact
                 </Link>
                 <Link to={"/Blogs"} style={{textDecoration:"none"}}>
                     Blogs
