@@ -41,7 +41,6 @@ let Navbar1 = (props) => {
                 { isLogged && <Link to={"/Profile"} style={{textDecoration:"none"}}>
                     Profile
                 </Link> }
-
                 { !isLogged && <Link to={"/Signup"} style={{textDecoration:"none"}}>
                     Sign Up
                 </Link> }
