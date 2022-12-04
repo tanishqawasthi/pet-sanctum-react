@@ -835,25 +835,6 @@
       "id": 1667150019033
     },
     {
-<<<<<<< HEAD
-      "type": "Cat",
-      "age": "NA",
-      "sex": "Male",
-      "otherhumans": "NA",
-      "otherpets": "NA",
-      "trained": "NA",
-      "vaccinated": "NA",
-      "additional": "",
-      "imageUrl": "https://www.davpetlovers.com/wp-content/uploads/2020/04/IMG_8917.jpg",
-      "owner": "NA",
-      "phone": "8236428423",
-      "address": "Sricity",
-      "isAdopt": "-1",
-      "pincode": "207541",
-      "name": "Jack",
-      "breed": "Don't know",
-      "id": 1667189484921
-=======
       "type": "Dog",
       "age": "2",
       "sex": "Male",
@@ -871,7 +852,25 @@
       "name": "Bruno",
       "breed": "Pug",
       "id": 1667191836287
->>>>>>> 63b01ec7e0144d8bd10ba618dad18ec42938b3fb
+    },
+    {
+      "type": "Dog",
+      "age": 0,
+      "sex": "Male",
+      "otherhumans": "No",
+      "otherpets": "No",
+      "trained": "No",
+      "vaccinated": "No",
+      "additional": "",
+      "imageUrl": "https://www.davpetlovers.com/wp-content/uploads/2020/04/IMG_8917.jpg",
+      "owner": "Team Pet Sanctum",
+      "phone": "9878788234",
+      "address": "address2",
+      "isAdopt": "-1",
+      "pincode": "500013",
+      "name": "sdf",
+      "breed": "asdf",
+      "id": 1670162097288
     }
   ]
 }

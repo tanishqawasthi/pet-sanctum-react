@@ -19,6 +19,9 @@ let Navbar1 = (props) => {
                 <Link to={"/Rescue"} style={{textDecoration:"none"}}>
                     Rescue Page
                 </Link>
+                <Link to={"/AddBlog"} style={{textDecoration:"none"}}>
+                    Add Blog
+                </Link>
                 <Link to={"/DonateUs"} style={{textDecoration:"none"}}>
                     Donate Us
                 </Link>

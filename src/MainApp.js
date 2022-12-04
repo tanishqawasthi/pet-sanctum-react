@@ -10,6 +10,7 @@ import Rescue from "./components/Rescue/Rescue"
 import PetInformation from "./components/PetInformation/PetInformation"
 import Signup from "./components/Signup/Signup"
 import DonateUs from "./components/Donate/Donate"
+import AddBlog from "./components/AddBlog/AddBlog"
 
 let MainApp = (props)=>{
     return (
@@ -21,6 +22,7 @@ let MainApp = (props)=>{
                 <Route path="/Rescue" element={<Rescue />} />
                 <Route path="/Login" element={<Login/>} />
                 <Route path="/Upload" element={<Upload/>} />
+                <Route path="/AddBlog" element={<AddBlog/>}/>
                 <Route path="/PetInformation/:id" element={<PetInformation/>} />
                 <Route path="/Signup" element={<Signup/>} />
                 <Route path="/DonateUs" element={<DonateUs/>} />
