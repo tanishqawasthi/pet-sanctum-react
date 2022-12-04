@@ -9,7 +9,7 @@ const PetInformation = (props) => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3000/Pets/${temp.id}`)
+        axios.get(`http://localhost:3005/Pets/${temp.id}`)
             .then(res => {
                 console.log(res.data);
                 setData(res.data);

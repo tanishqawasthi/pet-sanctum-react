@@ -3,10 +3,10 @@ import { Link } from "react-router-dom"
 import { Navbar, Container, Nav } from "react-bootstrap";
 
 let Navbar1 = (props) => {
-
+    
     return (
         <div>
-            <div className="d-flex justify-content-evenly bg-dark p-3">
+            <div className="d-flex justify-content-evenly bg-dark p-3 text-white">
                 <Link to={"/"} style={{textDecoration:"none"}}>
                     Home Page
                 </Link>
@@ -27,6 +27,12 @@ let Navbar1 = (props) => {
                 </Link>
                 <Link to={"/Signup"} style={{textDecoration:"none"}}>
                     Sign Up
+                </Link>
+                <Link to={"/Blogs"} style={{textDecoration:"none"}}>
+                    Blogs
+                </Link>
+                <Link to={"/Profile"} style={{textDecoration:"none"}}>
+                    Profile
                 </Link>
             </div>
         </div>
