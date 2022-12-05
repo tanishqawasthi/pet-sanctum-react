@@ -24,10 +24,7 @@ let Home = (props)=>{
                         <div className="row">
                             <div className="col-lg-5 col-md-6">
                                 <h1 className="hech1_sreekar" style={{color: "white"}}>Providing All Animals Homes.</h1>
-                                <p className = "pee_sreekar" style={{color: "white"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                                    veritatis ducimus dolor harum
-                                    neque consectetur ratione nisi sed architecto, atque et ipsum, esse laborum labore deleniti
-                                    illum soluta molestiae nihil.</p>
+                                <p className = "pee_sreekar" style={{color: "white"}}> India has 80 million homeless dogs, cats, has highest levels of abandonment and THIS BREAKS OUR HEARTS! Join our cause and help provide lives to these poor souls. </p>
 
                                 <div className="mt-4">
                                     <Link to="/Adopt">
@@ -64,10 +61,9 @@ let Home = (props)=>{
                             </div>
                             <div className="col-lg-5 col-md-12 text-sec">
                                 <h2 className="hech2_sreekar" style={{color:"white"}}>About Us</h2>
-                                <p className="pee_sreekar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea magnam corrupti repudiandae?
-                                    Minus asperiores ipsum adipisci exercitationem recusand</p>
+                                <p className="pee_sreekar">We are a group of students who share a common love for animals and believe that all animals deserve homes. We strive to provide care and shelter for all animals irrespective of their species or breed and put an end to animal cruelty. We help make the world a better place for voiceless animals who deserve more than to be abandoned and killed.</p>
                                     <Link to="/DonateUs">
-                                        <button className="main-btn mt-4">Read More</button>
+                                        <button className="main-btn mt-4">Find Out More</button>
                                     </Link>
                     
                             </div>
@@ -83,12 +79,7 @@ let Home = (props)=>{
                             <div className="row align-items-center">
                                 <div className="col-lg-5 col-md-12 text-sec mb-lg-0 mb-5">
                                     <h2 className="hech2_sreekar" style={{color: "var(--primary-color)"}}>Help a Stray Animal Get a Home.</h2>
-                                    <p className="pee_sreekar">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, soluta mollitia
-                                        aspernatur ab ex veritatis culpa excepturi laboriosam asperiores quidem! Inventore
-                                        commodi minima unde incidunt mollitia magni facere, ut corrupti!
-                                        Cupiditate odio dolorum iure nostrum placeat a voluptates neque voluptas. Iusto deserunt
-                                        iste nam, magni eius sint, necessitatibus debitis corporis non sequi illo quam tempora
-                                        quibusdam exercitationem? Ad, accusantium cum.</p>
+                                    <p className="pee_sreekar"> Relinquishment levels are higher in India than on a global level with half (50 per cent) of current and previous owners stating they have relinquished a pet in the past, compared to 28 per cent on a global level. About 34 per cent said they have abandoned a dog on the streets, and 32 per cent have abandoned a cat. Most of these animals die in accidents or due to hunger very soon. If you see a stray animal in your neighbourhood, use our site to rescue it and provide a home for it. </p>
                                         <Link to="/Rescue">
                                             <button className="main-btn mt-4">Rescue A Stray</button>
                                         </Link>
@@ -111,9 +102,7 @@ let Home = (props)=>{
                             <div className="col-sm-12">
                                 <div className="text-content">
                                     <h2 className="hech2_sreekar">It All Started With One Animal</h2>
-                                    <p className="pee_sreekar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia est veniam magni
-                                        perspiciatis, recusandae itaque voluptas. Nostrum laudantium dolores velit, soluta
-                                        laboriosam similique et consequatur, optio repellat repellendus, voluptas repudiandae.
+                                    <p className="pee_sreekar"> The need for this movement struck us when we saw for ourselves how pet stores, from which most people buy pets for a lot of money, treat animals horribly. We wanted to tell the world to see animals as living beings instead of tokens for public clout.
                                     </p>
                                     <Link to="/Rescue">
                                         <button className="main-btn mt-4">Rescue A Stray</button>
@@ -144,7 +133,7 @@ let Home = (props)=>{
                        
                                             <div className="card-btn m-3">Adopt A Pet</div>
                                         </Link>
-                                        <p className="card-text"> We feed the animals rescued</p>
+                                        <p className="card-text"> Get a new member in your family </p>
 
                                     </div>
                                 </div>
@@ -174,7 +163,7 @@ let Home = (props)=>{
                                         <Link to="/Rescue">
                                             <div className="card-btn m-3">Rescue A Stray</div>
                                         </Link>
-                                        <p className="card-text"> Lorem ipsum dolor sit. sdkfhj; </p>
+                                        <p className="card-text"> Save an animal from dying </p>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +195,7 @@ let Home = (props)=>{
                                             <div className="carousel-item active">
                                                 <div className="carousel-caption">
                                                     <img src={homeImg6} alt="" />
-                                                    <p className="pee_sreekar">"Lorem ipsum dolor sit amet consectetur adipisicing elit"</p>
+                                                    <p className="pee_sreekar">"Mitron, help Indian animals find homes."</p>
                                                     <h5 className="hech5_sreekar" style={{color: "white"}}>Narendra Modi - Prime Minister of India</h5>
                                                 </div>
                                             </div>
@@ -244,51 +233,27 @@ let Home = (props)=>{
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Where are you located?</Accordion.Header>
                         <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        We are located in Sri City, a leading industrial city in India.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>What do I need to know?</Accordion.Header>
                         <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        We are an NGO striving to make a difference. And you can help us without putting any money or effort from your side. Just upload the details of an animal to save it.
                         </Accordion.Body>
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="2">
                         <Accordion.Header>How much does it cost?</Accordion.Header>
                         <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        It is totally free of cost. Everyone can upload the details of their pets or stray animals to rescue it, and provide a new family to it. 
                         </Accordion.Body>
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="3">
                         <Accordion.Header>How do I sign up?</Accordion.Header>
                         <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                        Click on the Sign Up button to create a free account in Petsanctum.
                         </Accordion.Body>
                     </Accordion.Item>
 
