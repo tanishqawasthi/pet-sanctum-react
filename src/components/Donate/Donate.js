@@ -13,11 +13,11 @@ let Donate = (props) => {
                     <div className="col-1"></div>
                     <div className="col-5" style={{ height: "100%" }}>
                         <h1 className="text-white">Help us protect them</h1>
-                        <h4 className="mt-3 text-white">Lorem ipsum dolor sit amet consectetur.</h4>
-                        <h4 className="mt-3 text-white">Lorem ipsum dolor sit amet consectetur.</h4>
+                        <h4 className="mt-3 text-white">We are a non-profit organization with no source of income and we need your help.</h4>
+                        <h4 className="mt-3 text-white">Your donation can help save millions of animals.</h4>
                         <a href="#cause">
                             <Button className="btn btn-primary mt-3 rounded-pill p-2 ps-3 pe-3">
-                                <h4>Donate Us</h4>
+                                <h4>Donate to Us</h4>
                             </Button>
                         </a>
                     </div>
