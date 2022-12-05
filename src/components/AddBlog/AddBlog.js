@@ -24,7 +24,6 @@ let AddBlogs = (props) => {
         console.log("submit")
     };
 
-
     let PostData = ()=>{
         let temp = new Date().valueOf();
         let formInput1 = {

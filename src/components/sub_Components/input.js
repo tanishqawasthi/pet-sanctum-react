@@ -8,17 +8,28 @@ import Pwd from "./validation/pwd";
 import Cpwd from "./validation/cpwd";
 import Pincode from "./validation/pincode";
 
-
+let fname;
+let lname;
+let email;
+let phone;
+let uname;
+let state;
+let city;
+let zip;
+let address;
+let password;
+let con_password;
 let flag_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const Handle_Flag = () =>{
   let flag_index = -1;
 for (let i = 0; i < flag_array.length; i++){
   if (flag_array[i] === 1) {
-    flag_index = i;
+    flag_index = 1;
     break;
   }
 }
-return flag_index;
+// return flag_index
+return [flag_index,fname,lname,email,phone,uname,state,city,zip,address,password];
 
 }
 function Input(props) {
@@ -33,10 +44,9 @@ function Input(props) {
     top: 45,
     left: 20,
   };
-  let password;
-  if (props.input_id === "pwd_signup") {
-    password = user_input;
-  }
+  
+  
+ 
 
   return (
     <>
@@ -57,6 +67,8 @@ function Input(props) {
 
           if (e.target.name === "fname_signup") {
             let [returned_span, flag] = Name(input_detail);
+            fname = input_detail.value;
+
             flag_array[0] = flag;
             set_label(returned_span);
            
@@ -64,42 +76,56 @@ function Input(props) {
 
           if (e.target.name === "lname_signup") {
             let [returned_span, flag] = Name(input_detail);
+            lname = input_detail.value;
+
             flag_array[1] = flag;
             set_label(returned_span);
            
           }
           if (e.target.name === "email_signup") {
             let [returned_span, flag] = Email(input_detail);
+            email = input_detail.value;
+
             flag_array[7] = flag;
             set_label(returned_span);
             
           }
           if (e.target.name === "phone_signup") {
             let [returned_span, flag] = Phone(input_detail);
+            phone = input_detail.value;
+
             flag_array[2] = flag;
             set_label(returned_span);
            
           }
           if (e.target.name === "uname_signup") {
             let [returned_span, flag] = Username(input_detail);
+            uname = input_detail.value;
+
             flag_array[8] = flag;
             set_label(returned_span);
             
           }
           if (e.target.name === "state_signup") {
             let [returned_span, flag] = Empty(input_detail);
+            state = input_detail.value;
+
             flag_array[3] = flag;
             set_label(returned_span);
             
           }
           if (e.target.name === "city_signup") {
             let [returned_span, flag] = Empty(input_detail);
+            city = input_detail.value;
+
             flag_array[4] = flag;
             set_label(returned_span);
             
           }
           if (e.target.name === "zip_signup") {
             let [returned_span, flag] = Pincode(input_detail);
+            zip = input_detail.value;
+
             flag_array[5] = flag;
             set_label(returned_span);
            
@@ -107,18 +133,22 @@ function Input(props) {
 
           if (e.target.name === "address_signup") {
             let [returned_span, flag] = Empty(input_detail);
+            address = input_detail.value;
             flag_array[6] = flag;
             set_label(returned_span);
             
           }
           if (e.target.name === "pwd_signup") {
             let [returned_span, flag] = Pwd(input_detail);
+            password = input_detail.value;
             flag_array[9] = flag;
             set_label(returned_span);
            
           }
           if (e.target.name === "cpwd_signup") {
             let [returned_span, flag] = Cpwd(input_detail);
+            con_password = input_detail.value;
+
             flag_array[10] = flag;
             set_label(returned_span);
             

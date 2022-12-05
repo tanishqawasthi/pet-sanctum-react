@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { useNavigate } from 'react-router-dom';
 
-const Container = (props) => {
+const Container1 = (props) => {
     
     const [show, setShow] = useState(false);
 
@@ -187,4 +187,4 @@ const Container = (props) => {
     )
 }
 
-export default Container;
+export default Container1;

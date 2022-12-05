@@ -13,16 +13,16 @@ let Navbar1 = (props) => {
         <div>
             <div className="d-flex justify-content-evenly bg-dark p-3 text-white">
                 <Link to={"/"} style={{textDecoration:"none"}}>
-                    Home Page
+                    Home
                 </Link>
                 <Link to={"/Adopt"} style={{textDecoration:"none"}}>
-                    Adopt Page
+                    Adopt
                 </Link>
                 <Link to={"/Upload"} style={{textDecoration:"none"}}>
-                    Upload Page
+                    Upload
                 </Link>
                 <Link to={"/Rescue"} style={{textDecoration:"none"}}>
-                    Rescue Page
+                    Rescue
                 </Link>
                 {
                     isAdmin && <Link to={"/AddBlog"} style={{textDecoration:"none"}}>
@@ -46,7 +46,7 @@ let Navbar1 = (props) => {
                 </Link> }
                 
                 { !isLogged && <Link to={"/Login"} style={{textDecoration:"none"}}>
-                    Login Page
+                    Login
                 </Link> }
                 
                 

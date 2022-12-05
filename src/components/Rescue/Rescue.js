@@ -1,9 +1,9 @@
-import Container from './Container';
+import Container1 from './Container1';
 
 const Rescue = (props) => {
     return(
         <div>
-            <Container/>
+            <Container1/>
         </div>
     )
 }
